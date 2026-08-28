@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Snippet — Témoignages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /*
+      Snippet réutilisable — section "Témoignages"
+      Adapté d'un composant HyperUI (Tailwind) vers du CSS classique.
+      A NE PAS activer tant qu'il n'y a pas de vrais avis clients :
+      les textes entre [ ] sont des placeholders à remplacer, jamais
+      des citations réelles à publier telles quelles.
+
+      Pour l'intégrer dans un projet : copier le <section class="testimonials">
+      ci-dessous + le bloc CSS "Testimonials" dans le stylesheet du projet,
+      en adaptant les variables --accent/--surface/--border/--radius/--text
+      à celles déjà définies dans ce projet (ou en gardant celles ci-dessous).
+    */
+    :root {
+      --bg: #070a10;
+      --surface: #151a24;
+      --border: #232a38;
+      --text: #e7ebf3;
+      --text-muted: #97a1b5;
+      --accent: #4fd1c5;
+      --radius: 14px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, sans-serif;
+      padding: 60px 24px;
+    }
+
+    .testimonials {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .testimonial-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .testimonial-quote {
+      flex: 1;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .testimonial-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--accent) 18%, transparent);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .testimonial-role {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="testimonials">
+    <ul class="testimonials-grid">
+      <li class="testimonial-card">
+        <blockquote class="testimonial-quote">« [Témoignage client à venir] »</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">[XX]</div>
+          <div>
+            <p class="testimonial-name">[Nom du client]</p>
+            <p class="testimonial-role">[Fonction, entreprise]</p>
+          </div>
+        </div>
+      </li>
+      <li class="testimonial-card">
+        <blockquote class="testimonial-quote">« [Témoignage client à venir] »</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">[XX]</div>
+          <div>
+            <p class="testimonial-name">[Nom du client]</p>
+            <p class="testimonial-role">[Fonction, entreprise]</p>
+          </div>
+        </div>
+      </li>
+      <li class="testimonial-card">
+        <blockquote class="testimonial-quote">« [Témoignage client à venir] »</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">[XX]</div>
+          <div>
+            <p class="testimonial-name">[Nom du client]</p>
+            <p class="testimonial-role">[Fonction, entreprise]</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</body>
+</html>
