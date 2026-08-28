@@ -237,16 +237,6 @@ img {
   justify-content: center;
 }
 
-.hero-photo {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  position: relative;
-  z-index: 1;
-}
-
 .glow {
   position: absolute;
   width: 280px;
@@ -255,6 +245,45 @@ img {
   filter: blur(90px);
   opacity: 0.25;
   border-radius: 50%;
+}
+
+.code-mock {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 380px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
+}
+
+.code-mock-body {
+  margin: 0;
+  padding: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--text);
+  text-align: left;
+  overflow-x: auto;
+}
+
+.code-mock-body .tok-kw {
+  color: #c792ea;
+}
+
+.code-mock-body .tok-fn {
+  color: var(--accent);
+}
+
+.code-mock-body .tok-str {
+  color: #ffcb6b;
+}
+
+.code-mock-body .tok-tag {
+  color: var(--accent);
 }
 
 /* Cards */
