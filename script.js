@@ -1,4 +1,6 @@
-emailjs.init("zGg6PSsNVbHjx1E6U");
+if (typeof emailjs !== "undefined") {
+  emailjs.init("zGg6PSsNVbHjx1E6U");
+}
 
 const form = document.getElementById("contact-form");
 const message = document.getElementById("form-message");
@@ -6,6 +8,18 @@ const message = document.getElementById("form-message");
 if (form) {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    if (form.company.value.trim() !== "") {
+      // Piège à bots : champ honeypot rempli, on ignore silencieusement.
+      form.reset();
+      return;
+    }
+
+    if (typeof emailjs === "undefined") {
+      message.textContent = "Service d'envoi indisponible pour le moment, réessayez plus tard.";
+      message.style.color = "#e57373";
+      return;
+    }
 
     emailjs.sendForm("service_fube5n4", "template_portfolio", this)
       .then(() => {
@@ -20,4 +34,61 @@ if (form) {
         console.error("Erreur EmailJS :", error);
       });
   });
+}
+
+const navToggle = document.querySelector(".nav-toggle");
+const primaryNav = document.getElementById("primary-nav");
+
+if (navToggle && primaryNav) {
+  const closeMenu = () => {
+    primaryNav.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Ouvrir le menu");
+  };
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = primaryNav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+  });
+
+  primaryNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!primaryNav.classList.contains("open")) return;
+    if (!primaryNav.contains(e.target) && !navToggle.contains(e.target)) {
+      closeMenu();
+    }
+  });
+}
+
+const navLinks = document.querySelectorAll(".navbar nav a[href^='#']");
+const sections = Array.from(navLinks)
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+
+if (sections.length && "IntersectionObserver" in window) {
+  const setActiveLink = (id) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setActiveLink(visible.target.id);
+    },
+    { rootMargin: "-40% 0px -50% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
+  );
+
+  sections.forEach((section) => observer.observe(section));
 }
