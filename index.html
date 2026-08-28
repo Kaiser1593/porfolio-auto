@@ -5,7 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaïs Padrines — Développeur Web Freelance</title>
   <meta name="description" content="Développeur web freelance : création et maintenance d'applications web sur mesure." />
-  <link rel="icon" href="image/kp.png" type="image/png" />
+
+  <!-- TODO: remplacer par le vrai nom de domaine une fois en ligne -->
+  <link rel="canonical" href="https://www.kais-padrines.fr/" />
+
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kaïs Padrines — Développeur Web Freelance" />
+  <meta property="og:title" content="Kaïs Padrines — Développeur Web Freelance" />
+  <meta property="og:description" content="Développeur web freelance : création et maintenance d'applications web sur mesure." />
+  <meta property="og:image" content="https://www.kais-padrines.fr/image/kp-512.png" />
+  <meta property="og:url" content="https://www.kais-padrines.fr/" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kaïs Padrines — Développeur Web Freelance" />
+  <meta name="twitter:description" content="Développeur web freelance : création et maintenance d'applications web sur mesure." />
+  <meta name="twitter:image" content="https://www.kais-padrines.fr/image/kp-512.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="image/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="image/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#0b0e14" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Kaïs Padrines — Développeur Web Freelance",
+    "url": "https://www.kais-padrines.fr/",
+    "image": "https://www.kais-padrines.fr/image/kp-512.png",
+    "description": "Développeur web freelance : création et maintenance d'applications web sur mesure.",
+    "areaServed": "FR",
+    "founder": {
+      "@type": "Person",
+      "name": "Kaïs Padrines",
+      "jobTitle": "Développeur Web Freelance"
+    },
+    "sameAs": []
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +60,12 @@
   <header class="navbar">
     <div class="nav-inner">
       <a href="#accueil" class="logo">Kaïs<span>.dev</span></a>
-      <nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="primary-nav">
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#realisations">Réalisations</a></li>
@@ -45,7 +94,10 @@
       </div>
       <div class="hero-visual" aria-hidden="true">
         <div class="glow"></div>
-        <img src="image/kp.png" alt="" class="hero-photo" />
+        <picture>
+          <source srcset="image/kp.webp" type="image/webp" />
+          <img src="image/kp.png" alt="" class="hero-photo" width="900" height="674" />
+        </picture>
       </div>
     </section>
 
@@ -78,24 +130,24 @@
       <p class="stack-intro">Les outils que j'utilise au quotidien pour livrer du code propre et durable.</p>
       <div class="marquee">
         <div class="marquee-track">
-          <div class="stack-item"><img src="image/html.png" alt="HTML5" /><span>HTML5</span></div>
-          <div class="stack-item"><img src="image/css.png" alt="CSS3" /><span>CSS3</span></div>
-          <div class="stack-item"><img src="image/js.png" alt="JavaScript" /><span>JavaScript</span></div>
-          <div class="stack-item"><img src="image/php.png" alt="PHP" /><span>PHP</span></div>
-          <div class="stack-item"><img src="image/python.png" alt="Python" /><span>Python</span></div>
-          <div class="stack-item"><img src="https://cdn.simpleicons.org/react" alt="React" /><span>React</span></div>
-          <div class="stack-item"><img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" /><span>Node.js</span></div>
-          <div class="stack-item"><img src="https://cdn.simpleicons.org/mysql" alt="MySQL" /><span>MySQL</span></div>
-          <div class="stack-item"><img src="https://cdn.simpleicons.org/docker" alt="Docker" /><span>Docker</span></div>
-          <div class="stack-item" aria-hidden="true"><img src="image/html.png" alt="" /><span>HTML5</span></div>
-          <div class="stack-item" aria-hidden="true"><img src="image/css.png" alt="" /><span>CSS3</span></div>
-          <div class="stack-item" aria-hidden="true"><img src="image/js.png" alt="" /><span>JavaScript</span></div>
-          <div class="stack-item" aria-hidden="true"><img src="image/php.png" alt="" /><span>PHP</span></div>
-          <div class="stack-item" aria-hidden="true"><img src="image/python.png" alt="" /><span>Python</span></div>
-          <div class="stack-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/react" alt="" /><span>React</span></div>
-          <div class="stack-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/nodedotjs" alt="" /><span>Node.js</span></div>
-          <div class="stack-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/mysql" alt="" /><span>MySQL</span></div>
-          <div class="stack-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/docker" alt="" /><span>Docker</span></div>
+          <div class="stack-item"><img src="image/html.png" alt="HTML5" width="46" height="46" /><span>HTML5</span></div>
+          <div class="stack-item"><img src="image/css.png" alt="CSS3" width="46" height="46" /><span>CSS3</span></div>
+          <div class="stack-item"><img src="image/js.png" alt="JavaScript" width="46" height="46" /><span>JavaScript</span></div>
+          <div class="stack-item"><img src="image/php.png" alt="PHP" width="46" height="46" /><span>PHP</span></div>
+          <div class="stack-item"><img src="image/python.png" alt="Python" width="46" height="46" /><span>Python</span></div>
+          <div class="stack-item"><img src="https://cdn.simpleicons.org/react" alt="React" width="46" height="46" /><span>React</span></div>
+          <div class="stack-item"><img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" width="46" height="46" /><span>Node.js</span></div>
+          <div class="stack-item"><img src="https://cdn.simpleicons.org/mysql" alt="MySQL" width="46" height="46" /><span>MySQL</span></div>
+          <div class="stack-item"><img src="https://cdn.simpleicons.org/docker" alt="Docker" width="46" height="46" /><span>Docker</span></div>
+          <div class="stack-item" aria-hidden="true"><img src="image/html.png" alt="" width="46" height="46" /><span>HTML5</span></div>
+          <div class="stack-item" aria-hidden="true"><img src="image/css.png" alt="" width="46" height="46" /><span>CSS3</span></div>
+          <div class="stack-item" aria-hidden="true"><img src="image/js.png" alt="" width="46" height="46" /><span>JavaScript</span></div>
+          <div class="stack-item" aria-hidden="true"><img src="image/php.png" alt="" width="46" height="46" /><span>PHP</span></div>
+          <div class="stack-item" aria-hidden="true"><img src="image/python.png" alt="" width="46" height="46" /><span>Python</span></div>
+          <div class="stack-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/react" alt="" width="46" height="46" /><span>React</span></div>
+          <div class="stack-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/nodedotjs" alt="" width="46" height="46" /><span>Node.js</span></div>
+          <div class="stack-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/mysql" alt="" width="46" height="46" /><span>MySQL</span></div>
+          <div class="stack-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/docker" alt="" width="46" height="46" /><span>Docker</span></div>
         </div>
       </div>
     </section>
@@ -105,21 +157,30 @@
       <h2>Réalisations</h2>
       <div class="cards projects-grid">
         <article class="project-card">
-          <img src="projet/mediconnect.png" alt="Plateforme de prise de rendez-vous médicaux MediConnect" loading="lazy" />
+          <picture>
+            <source srcset="projet/mediconnect.webp" type="image/webp" />
+            <img src="projet/mediconnect.jpg" alt="Plateforme de prise de rendez-vous médicaux MediConnect" loading="lazy" width="1200" height="538" />
+          </picture>
           <div class="project-info">
             <h3>MediConnect</h3>
             <p>Plateforme de prise de rendez-vous médicaux : React, API Node.js/Express, MySQL, authentification JWT, déployée avec Docker.</p>
           </div>
         </article>
         <article class="project-card">
-          <img src="projet/helpdesk.png" alt="Application de gestion de tickets HelpDesk" loading="lazy" />
+          <picture>
+            <source srcset="projet/helpdesk.webp" type="image/webp" />
+            <img src="projet/helpdesk.jpg" alt="Application de gestion de tickets HelpDesk" loading="lazy" width="1200" height="535" />
+          </picture>
           <div class="project-info">
             <h3>HelpDesk</h3>
             <p>Outil de gestion et suivi de tickets d'assistance pour un service support interne.</p>
           </div>
         </article>
         <article class="project-card">
-          <img src="projet/hand.png" alt="Application de gestion pour un club de handball" loading="lazy" />
+          <picture>
+            <source srcset="projet/hand.webp" type="image/webp" />
+            <img src="projet/hand.jpg" alt="Application de gestion pour un club de handball" loading="lazy" width="1200" height="539" />
+          </picture>
           <div class="project-info">
             <h3>Handball World</h3>
             <p>Application d'information sur le monde du handball.</p>
@@ -169,9 +230,22 @@
       <p class="section-eyebrow">Contact</p>
       <h2>Un projet en tête ?</h2>
       <form id="contact-form">
-        <input type="text" name="from_name" placeholder="Votre nom" required />
-        <input type="email" name="reply_to" placeholder="Votre email" required />
-        <textarea name="message" placeholder="Décrivez votre projet" rows="5" required></textarea>
+        <div class="form-field">
+          <label for="from_name" class="sr-only">Votre nom</label>
+          <input id="from_name" type="text" name="from_name" placeholder="Votre nom" autocomplete="name" required />
+        </div>
+        <div class="form-field">
+          <label for="reply_to" class="sr-only">Votre email</label>
+          <input id="reply_to" type="email" name="reply_to" placeholder="Votre email" autocomplete="email" required />
+        </div>
+        <div class="form-field">
+          <label for="message" class="sr-only">Décrivez votre projet</label>
+          <textarea id="message" name="message" placeholder="Décrivez votre projet" rows="5" required></textarea>
+        </div>
+        <div class="form-field honeypot-field" aria-hidden="true">
+          <label for="company">Ne pas remplir ce champ</label>
+          <input id="company" type="text" name="company" tabindex="-1" autocomplete="off" />
+        </div>
         <button type="submit" class="btn btn-primary">Envoyer</button>
       </form>
       <p id="form-message"></p>

@@ -1,0 +1,12 @@
+{
+  "name": "Kaïs Padrines — Développeur Web Freelance",
+  "short_name": "Kaïs Padrines",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0e14",
+  "theme_color": "#0b0e14",
+  "icons": [
+    { "src": "image/kp-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "image/kp-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
