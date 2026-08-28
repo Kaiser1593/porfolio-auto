@@ -578,6 +578,21 @@ img {
   flex-direction: column;
 }
 
+.form-field label:not(.sr-only) {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.form-field-row {
+  flex-direction: row;
+  gap: 16px;
+}
+
+.form-field-row .form-field {
+  flex: 1;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -599,6 +614,7 @@ img {
 }
 
 #contact-form input,
+#contact-form select,
 #contact-form textarea {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -610,7 +626,12 @@ img {
   resize: vertical;
 }
 
+#contact-form select {
+  cursor: pointer;
+}
+
 #contact-form input:focus,
+#contact-form select:focus,
 #contact-form textarea:focus {
   outline: none;
   border-color: var(--accent);
@@ -702,5 +723,10 @@ img {
 
   .section {
     padding: 60px 20px;
+  }
+
+  .form-field-row {
+    flex-direction: column;
+    gap: 16px;
   }
 }
