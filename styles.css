@@ -368,7 +368,7 @@ img {
 
 /* Stack */
 .stack-section {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .stack-intro {
@@ -379,7 +379,9 @@ img {
 
 .marquee {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-top: 10px;
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
