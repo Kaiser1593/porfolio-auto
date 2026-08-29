@@ -508,6 +508,25 @@ img {
   border-radius: 4px;
 }
 
+.project-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.project-links a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: var(--accent);
+}
+
 /* Process */
 .process-grid {
   display: grid;
