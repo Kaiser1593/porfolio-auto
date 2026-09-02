@@ -92,3 +92,38 @@ if (sections.length && "IntersectionObserver" in window) {
 
   sections.forEach((section) => observer.observe(section));
 }
+
+const groupSelectors = [".cards", ".process-grid", ".faq-list"];
+const revealTargets = [];
+
+document.querySelectorAll(".section").forEach((section) => {
+  Array.from(section.children).forEach((child) => {
+    if (groupSelectors.some((sel) => child.matches(sel))) {
+      Array.from(child.children).forEach((item) => revealTargets.push(item));
+    } else {
+      revealTargets.push(child);
+    }
+  });
+});
+
+revealTargets.forEach((el) => el.classList.add("reveal"));
+
+if (revealTargets.length && "IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const siblings = Array.from(el.parentElement.children).filter((c) =>
+          c.classList.contains("reveal")
+        );
+        const delay = siblings.indexOf(el) * 80;
+        setTimeout(() => el.classList.add("visible"), delay);
+        revealObserver.unobserve(el);
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  revealTargets.forEach((el) => revealObserver.observe(el));
+}
