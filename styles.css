@@ -100,10 +100,18 @@ img {
 
 .logo {
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
 }
 
 .logo span {
   color: var(--accent);
+}
+
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 .navbar nav ul {
@@ -326,7 +334,28 @@ img {
 }
 
 .pricing-grid {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+}
+
+.pricing-maintenance {
+  margin-top: 24px;
+  border-left: 3px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.pricing-maintenance-info p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin: 4px 0 0;
+}
+
+.pricing-maintenance .price {
+  margin: 0;
+  white-space: nowrap;
 }
 
 .pricing-card h3 {
@@ -792,5 +821,14 @@ img {
   .form-field-row {
     flex-direction: column;
     gap: 16px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-maintenance {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
