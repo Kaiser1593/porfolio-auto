@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookies — KP WebCraft</title>
+  <meta name="description" content="Informations sur l'utilisation des cookies sur le site KP WebCraft et gestion de votre choix." />
+  <link rel="icon" href="favicon.ico?v=4" sizes="any" />
+  <link rel="icon" href="image/favicon-32x32.png?v=4" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png?v=4" />
+  <meta name="theme-color" content="#0b0e14" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><img src="image/kp-webcraft-icon.png" alt="KP WebCraft" class="logo-img" /></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">← Retour au site</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section legal-page">
+      <p class="section-eyebrow">Vie privée</p>
+      <h1 class="quote-title">Cookies et autorisations</h1>
+      <p class="quote-intro">
+        Un cookie est un petit fichier enregistré sur votre appareil par un site web. Voici ce que fait
+        ce site, et comment vous gardez la main sur votre choix.
+      </p>
+
+      <h2>Ce que ce site utilise</h2>
+      <div class="cards cookie-table">
+        <article class="card">
+          <h3>Strictement nécessaires</h3>
+          <p>Mémorisation de votre choix sur les cookies (stockée dans votre navigateur). Aucune autorisation n'est requise, ils ne servent à rien d'autre.</p>
+        </article>
+        <article class="card">
+          <h3>Mesure d'audience (optionnelle)</h3>
+          <p>Statistiques de visite anonymes pour savoir quelles pages sont consultées. Ils ne sont chargés qu'avec votre accord et ne sont pas encore activés sur ce site.</p>
+        </article>
+        <article class="card">
+          <h3>Publicité et suivi</h3>
+          <p>Aucun. Ce site ne place pas de cookie publicitaire ni de traceur de réseaux sociaux.</p>
+        </article>
+      </div>
+
+      <h2>Votre choix</h2>
+      <p class="cookie-status">Choix actuel : <strong id="cookie-status">non défini</strong></p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary" data-cookie-choice="accepted">Accepter les cookies optionnels</button>
+        <button type="button" class="btn btn-ghost" data-cookie-choice="refused">Tout refuser</button>
+      </div>
+      <p class="pricing-note">
+        Votre choix est conservé dans votre navigateur et peut être modifié à tout moment depuis cette page.
+        Des services tiers (polices Google, icônes de technologies, envoi du formulaire) peuvent recevoir votre adresse IP
+        lors du chargement de la page ; consultez leurs politiques respectives pour plus de détails.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 KP WebCraft — développeur web freelance.</p>
+    <p class="legal-note">Auto-entreprise en cours de création — mentions légales complètes à venir. · <a href="cookies.html">Cookies</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

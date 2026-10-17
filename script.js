@@ -21,11 +21,33 @@ if (form) {
       return;
     }
 
+    const full = document.getElementById("message-full");
+    if (full) {
+      const val = (n) => (form.elements[n] ? form.elements[n].value.trim() : "");
+      const checked = (n) =>
+        Array.from(form.querySelectorAll(`input[name="${n}"]:checked`)).map((c) => c.value).join(", ");
+      full.value = [
+        `Type de projet : ${val("project_type")}`,
+        `Budget : ${val("budget")}`,
+        `Délai : ${val("deadline")}`,
+        `Téléphone : ${val("phone") || "—"}`,
+        `Activité / structure : ${val("organization") || "—"}`,
+        `Site existant : ${val("existing_site") || "—"}`,
+        `Fonctionnalités : ${checked("features") || "—"}`,
+        `Contenus disponibles : ${checked("assets") || "—"}`,
+        `\nDescription :\n${val("description")}`,
+        `\nPages envisagées :\n${val("pages") || "—"}`,
+        `\nInspirations :\n${val("references") || "—"}`,
+        `\nRemarques :\n${val("notes") || "—"}`,
+      ].join("\n");
+    }
+
     emailjs.sendForm("service_fube5n4", "template_portfolio", this)
       .then(() => {
         message.textContent = "Message envoyé avec succès !";
         message.style.color = "#4fd1c5";
         form.reset();
+        message.scrollIntoView({ behavior: "smooth", block: "center" });
       })
       .catch((error) => {
         const detail = error && error.text ? ` (${error.text})` : "";
@@ -126,4 +148,65 @@ if (revealTargets.length && "IntersectionObserver" in window) {
   );
 
   revealTargets.forEach((el) => revealObserver.observe(el));
+}
+
+/* Consentement aux cookies */
+const CONSENT_KEY = "kp-cookie-consent";
+
+const readConsent = () => {
+  try {
+    return localStorage.getItem(CONSENT_KEY);
+  } catch (e) {
+    return null;
+  }
+};
+
+const loadOptionalServices = () => {
+  // TODO: charger ici le script de statistiques (ex. GoatCounter) une fois activé.
+};
+
+const updateConsentStatus = () => {
+  const label = document.getElementById("cookie-status");
+  if (!label) return;
+  const value = readConsent();
+  label.textContent =
+    value === "accepted" ? "cookies optionnels acceptés" :
+    value === "refused" ? "cookies optionnels refusés" : "non défini";
+};
+
+const setConsent = (value) => {
+  try {
+    localStorage.setItem(CONSENT_KEY, value);
+  } catch (e) {
+    /* stockage indisponible : le choix ne sera pas mémorisé */
+  }
+  const banner = document.getElementById("cookie-banner");
+  if (banner) banner.remove();
+  if (value === "accepted") loadOptionalServices();
+  updateConsentStatus();
+};
+
+if (readConsent() === "accepted") loadOptionalServices();
+updateConsentStatus();
+
+document.querySelectorAll("[data-cookie-choice]").forEach((btn) => {
+  btn.addEventListener("click", () => setConsent(btn.dataset.cookieChoice));
+});
+
+if (!readConsent() && !document.querySelector(".legal-page")) {
+  const banner = document.createElement("div");
+  banner.id = "cookie-banner";
+  banner.setAttribute("role", "dialog");
+  banner.setAttribute("aria-label", "Autorisation des cookies");
+  banner.innerHTML =
+    '<p>Ce site peut utiliser des cookies optionnels de mesure d\'audience. Vous pouvez les accepter ou les refuser, ' +
+    'et modifier votre choix à tout moment. <a href="cookies.html">En savoir plus</a></p>' +
+    '<div class="cookie-actions">' +
+    '<button type="button" class="btn btn-ghost" data-choice="refused">Refuser</button>' +
+    '<button type="button" class="btn btn-primary" data-choice="accepted">Accepter</button>' +
+    "</div>";
+  banner.querySelectorAll("[data-choice]").forEach((btn) => {
+    btn.addEventListener("click", () => setConsent(btn.dataset.choice));
+  });
+  document.body.appendChild(banner);
 }

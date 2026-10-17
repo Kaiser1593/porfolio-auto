@@ -73,7 +73,7 @@
           <li><a href="#processus">Processus</a></li>
           <li><a href="#a-propos">À propos</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact" class="nav-cta">Demander un devis</a></li>
+          <li><a href="devis.html" class="nav-cta">Demander un devis</a></li>
         </ul>
       </nav>
     </div>
@@ -90,7 +90,7 @@
           associations et petites entreprises — du premier échange jusqu'à la maintenance.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Discutons de votre projet</a>
+          <a href="devis.html" class="btn btn-primary">Discutons de votre projet</a>
           <a href="#realisations" class="btn btn-ghost">Voir mes réalisations</a>
         </div>
       </div>
@@ -122,7 +122,6 @@
       <h2>Services</h2>
       <div class="cards services-grid">
         <article class="card">
-          <div class="card-icon">🧩</div>
           <h3>Développement d'applications web sur mesure</h3>
           <p>
             De l'idée au déploiement : sites vitrines, outils métiers, interfaces d'administration.
@@ -130,7 +129,6 @@
           </p>
         </article>
         <article class="card">
-          <div class="card-icon">🔧</div>
           <h3>Maintenance &amp; évolution</h3>
           <p>
             Un site ou une application déjà en ligne ? Je prends en charge les correctifs,
@@ -154,16 +152,10 @@
           <p>Une bonne porte d'entrée pour une présence en ligne rapide.</p>
         </article>
         <article class="card pricing-card">
-          <h3>Appli web sur-mesure simple</h3>
-          <p class="pricing-subtext">CRUD, back-office, authentification basique</p>
+          <h3>Appli web sur-mesure</h3>
+          <p class="pricing-subtext">Back-office, comptes utilisateurs, tableaux de bord, base de données</p>
           <p class="price">À partir de 2 500 €</p>
-          <p>Environ 8 à 20 jours de développement selon le périmètre.</p>
-        </article>
-        <article class="card pricing-card">
-          <h3>Appli sur-mesure standard</h3>
-          <p class="pricing-subtext">Dashboard, plusieurs rôles, BDD relationnelle</p>
-          <p class="price">À partir de 6 000 €</p>
-          <p>Selon la complexité des rôles et des données.</p>
+          <p>Le tarif dépend du nombre de rôles, de la quantité de données et des fonctionnalités : il est précisé dans le devis.</p>
         </article>
         <article class="card pricing-card">
           <h3>Appli complexe</h3>
@@ -181,7 +173,7 @@
       </article>
       <p class="pricing-note">
         Ces montants sont donnés à titre indicatif : le prix final dépend du périmètre exact de votre projet.
-        <a href="#contact">Demandez un devis</a> pour un chiffrage précis et sans engagement.
+        <a href="devis.html">Demandez un devis</a> pour un chiffrage précis et sans engagement.
       </p>
     </section>
 
@@ -256,24 +248,6 @@
             </div>
           </div>
         </article>
-        <article class="project-card">
-          <div class="project-chrome">
-            <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
-            <span class="chrome-url">kaiser1593.github.io/handball-projet</span>
-          </div>
-          <img src="projet/hand.jpg" alt="Page d'accueil du site Handball World" loading="lazy" width="1891" height="858" />
-          <div class="project-info">
-            <h3>Handball World</h3>
-            <p>Application d'information sur le monde du handball.</p>
-            <div class="project-tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-            </div>
-            <div class="project-links">
-              <a href="https://kaiser1593.github.io/handball-projet/" target="_blank" rel="noopener">Voir le site</a>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -325,7 +299,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </summary>
-          <p class="faq-answer">Ça dépend du périmètre : quelques jours pour un mini-site, 8 à 20 jours pour une application sur-mesure simple, davantage pour un projet avec plusieurs rôles ou intégrations. Le devis précise toujours un délai estimé.</p>
+          <p class="faq-answer">Ça dépend du périmètre : quelques jours pour un mini-site, de quelques semaines pour une application sur-mesure, davantage pour un projet avec plusieurs rôles ou intégrations. Le devis précise toujours un délai estimé.</p>
         </details>
 
         <details class="faq-item">
@@ -345,7 +319,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </summary>
-          <p class="faq-answer">Vous décrivez votre besoin via le formulaire ci-dessous. On échange ensuite sur vos contraintes et objectifs avant qu'un devis vous soit proposé — sans engagement de votre part.</p>
+          <p class="faq-answer">Vous décrivez votre besoin via le formulaire de devis. On échange ensuite sur vos contraintes et objectifs avant qu'un devis vous soit proposé — sans engagement de votre part.</p>
         </details>
 
         <details class="faq-item">
@@ -380,64 +354,23 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section contact-cta">
       <p class="section-eyebrow">Contact</p>
       <h2>Un projet en tête ?</h2>
-      <form id="contact-form">
-        <div class="form-field">
-          <label for="from_name" class="sr-only">Votre nom</label>
-          <input id="from_name" type="text" name="from_name" placeholder="Votre nom" autocomplete="name" required />
-        </div>
-        <div class="form-field">
-          <label for="reply_to" class="sr-only">Votre email</label>
-          <input id="reply_to" type="email" name="reply_to" placeholder="Votre email" autocomplete="email" required />
-        </div>
-        <div class="form-field form-field-row">
-          <div class="form-field">
-            <label for="project_type">Type de projet</label>
-            <select id="project_type" name="project_type">
-              <option value="">Non précisé</option>
-              <option value="Landing page / mini-site simple">Landing page / mini-site simple</option>
-              <option value="Application sur-mesure simple">Application sur-mesure simple</option>
-              <option value="Application sur-mesure standard">Application sur-mesure standard</option>
-              <option value="Application complexe">Application complexe</option>
-              <option value="Maintenance / évolutions">Maintenance / évolutions</option>
-              <option value="Autre / je ne sais pas encore">Autre / je ne sais pas encore</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="budget">Budget estimé</label>
-            <select id="budget" name="budget">
-              <option value="">Non précisé</option>
-              <option value="Moins de 1 000 €">Moins de 1 000 €</option>
-              <option value="1 000 – 6 000 €">1 000 – 6 000 €</option>
-              <option value="6 000 – 15 000 €">6 000 – 15 000 €</option>
-              <option value="15 000 € et plus">15 000 € et plus</option>
-              <option value="À définir ensemble">À définir ensemble</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="message" class="sr-only">Décrivez votre projet</label>
-          <textarea id="message" name="message" placeholder="Décrivez votre projet" rows="5" required></textarea>
-        </div>
-        <div class="form-field honeypot-field" aria-hidden="true">
-          <label for="company">Ne pas remplir ce champ</label>
-          <input id="company" type="text" name="company" tabindex="-1" autocomplete="off" />
-        </div>
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-      </form>
-      <p id="form-message"></p>
+      <p>
+        Décrivez-moi le site ou l'application que vous imaginez : son objectif, ses fonctionnalités,
+        vos références. Je vous réponds avec un devis détaillé, sans engagement.
+      </p>
+      <a href="devis.html" class="btn btn-primary">Demander un devis</a>
     </section>
 
   </main>
 
   <footer class="site-footer">
     <p>© 2026 KP WebCraft — développeur web freelance.</p>
-    <p class="legal-note">Auto-entreprise en cours de création — mentions légales complètes à venir.</p>
+    <p class="legal-note">Auto-entreprise en cours de création — mentions légales complètes à venir. · <a href="cookies.html">Cookies</a></p>
   </footer>
 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="script.js"></script>
 
   <!-- TODO: créer un compte gratuit sur goatcounter.com, puis remplacer TONCODE ci-dessous

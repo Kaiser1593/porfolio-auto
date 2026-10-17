@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demander un devis — KP WebCraft</title>
+  <meta name="description" content="Décrivez votre projet de site ou d'application web à KP WebCraft pour recevoir un devis détaillé et sans engagement." />
+  <link rel="icon" href="favicon.ico?v=4" sizes="any" />
+  <link rel="icon" href="image/favicon-32x32.png?v=4" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png?v=4" />
+  <meta name="theme-color" content="#0b0e14" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><img src="image/kp-webcraft-icon.png" alt="KP WebCraft" class="logo-img" /></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">← Retour au site</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section quote-page">
+      <p class="section-eyebrow">Demande de devis</p>
+      <h1 class="quote-title">Décrivez-moi votre projet</h1>
+      <p class="quote-intro">
+        Plus vous êtes précis, plus mon devis le sera. Prenez le temps de décrire ce que vous imaginez :
+        à quoi doit servir le site, qui va l'utiliser, ce que vous aimez ailleurs. Aucun champ n'est
+        définitif, on en rediscutera ensemble. Je vous réponds sous 48 h ouvrées, sans engagement.
+      </p>
+
+      <form id="contact-form" class="quote-form">
+        <fieldset>
+          <legend>Vos coordonnées</legend>
+          <div class="form-field-row">
+            <div class="form-field">
+              <label for="from_name">Nom et prénom *</label>
+              <input id="from_name" type="text" name="from_name" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="reply_to">Email *</label>
+              <input id="reply_to" type="email" name="reply_to" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="form-field-row">
+            <div class="form-field">
+              <label for="phone">Téléphone (facultatif)</label>
+              <input id="phone" type="tel" name="phone" autocomplete="tel" />
+            </div>
+            <div class="form-field">
+              <label for="organization">Activité / entreprise / association</label>
+              <input id="organization" type="text" name="organization" autocomplete="organization" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Votre projet</legend>
+          <div class="form-field">
+            <label for="project_type">Type de projet</label>
+            <select id="project_type" name="project_type">
+              <option value="Non précisé">Non précisé</option>
+              <option value="Landing page / mini-site simple">Landing page / mini-site simple</option>
+              <option value="Application sur-mesure">Application sur-mesure</option>
+              <option value="Application complexe">Application complexe</option>
+              <option value="Refonte d'un site existant">Refonte d'un site existant</option>
+              <option value="Maintenance / évolutions">Maintenance / évolutions</option>
+              <option value="Autre / je ne sais pas encore">Autre / je ne sais pas encore</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="description">Décrivez le site ou l'application que vous voulez *</label>
+            <textarea id="description" name="description" rows="9" required
+              placeholder="Son objectif, à qui il s'adresse, ce que les visiteurs doivent pouvoir faire, l'ambiance souhaitée…"></textarea>
+          </div>
+          <div class="form-field">
+            <label for="pages">Pages ou écrans envisagés</label>
+            <textarea id="pages" name="pages" rows="3"
+              placeholder="Ex : accueil, présentation, tarifs, galerie, contact, espace client…"></textarea>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Fonctionnalités souhaitées</span>
+            <div class="check-grid">
+              <label><input type="checkbox" name="features" value="Formulaire de contact" /> Formulaire de contact</label>
+              <label><input type="checkbox" name="features" value="Comptes utilisateurs / connexion" /> Comptes utilisateurs / connexion</label>
+              <label><input type="checkbox" name="features" value="Espace d'administration" /> Espace d'administration</label>
+              <label><input type="checkbox" name="features" value="Paiement en ligne" /> Paiement en ligne</label>
+              <label><input type="checkbox" name="features" value="Prise de rendez-vous / réservation" /> Prise de rendez-vous / réservation</label>
+              <label><input type="checkbox" name="features" value="Boutique / catalogue produits" /> Boutique / catalogue produits</label>
+              <label><input type="checkbox" name="features" value="Blog / actualités" /> Blog / actualités</label>
+              <label><input type="checkbox" name="features" value="Multilingue" /> Multilingue</label>
+              <label><input type="checkbox" name="features" value="Connexion à un autre service (API)" /> Connexion à un autre service (API)</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contexte</legend>
+          <div class="form-field">
+            <label for="existing_site">Site existant (adresse)</label>
+            <input id="existing_site" type="text" name="existing_site" placeholder="https://" />
+          </div>
+          <div class="form-field">
+            <label for="references">Sites ou applications qui vous inspirent</label>
+            <textarea id="references" name="references" rows="3"
+              placeholder="Liens, et ce que vous aimez dedans (couleurs, mise en page, fonctionnement…)"></textarea>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Contenus déjà disponibles</span>
+            <div class="check-grid">
+              <label><input type="checkbox" name="assets" value="Logo" /> Logo</label>
+              <label><input type="checkbox" name="assets" value="Charte graphique" /> Charte graphique</label>
+              <label><input type="checkbox" name="assets" value="Textes" /> Textes</label>
+              <label><input type="checkbox" name="assets" value="Photos / images" /> Photos / images</label>
+              <label><input type="checkbox" name="assets" value="Nom de domaine" /> Nom de domaine</label>
+              <label><input type="checkbox" name="assets" value="Hébergement" /> Hébergement</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Budget et délais</legend>
+          <div class="form-field-row">
+            <div class="form-field">
+              <label for="budget">Budget estimé</label>
+              <select id="budget" name="budget">
+                <option value="Non précisé">Non précisé</option>
+                <option value="Moins de 1 000 €">Moins de 1 000 €</option>
+                <option value="1 000 – 5 000 €">1 000 – 5 000 €</option>
+                <option value="5 000 – 15 000 €">5 000 – 15 000 €</option>
+                <option value="15 000 € et plus">15 000 € et plus</option>
+                <option value="À définir ensemble">À définir ensemble</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="deadline">Délai souhaité</label>
+              <select id="deadline" name="deadline">
+                <option value="Non précisé">Non précisé</option>
+                <option value="Le plus tôt possible">Le plus tôt possible</option>
+                <option value="Dans le mois">Dans le mois</option>
+                <option value="Dans 2 à 3 mois">Dans 2 à 3 mois</option>
+                <option value="Pas de contrainte">Pas de contrainte</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="notes">Autre chose à ajouter ?</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-field honeypot-field" aria-hidden="true">
+          <label for="company">Ne pas remplir ce champ</label>
+          <input id="company" type="text" name="company" tabindex="-1" autocomplete="off" />
+        </div>
+        <input type="hidden" name="message" id="message-full" />
+
+        <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+        <p id="form-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 KP WebCraft — développeur web freelance.</p>
+    <p class="legal-note">Auto-entreprise en cours de création — mentions légales complètes à venir. · <a href="cookies.html">Cookies</a></p>
+  </footer>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
