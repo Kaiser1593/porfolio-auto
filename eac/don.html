@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faire un don — Entr'Aide et Culture (EAC)</title>
+<meta name="description" content="Soutenez l'association Entr'Aide et Culture par un don.">
+<meta name="theme-color" content="#5197a8">
+<link rel="icon" href="images/logo.webp" type="image/webp">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site"><div class="container">
+  <a class="brand" href="index.html"><img src="images/logo.webp" alt="Logo EAC : une chouette sur un livre ouvert" width="48" height="48"><span>Entr'Aide et Culture<small>EAC</small></span></a>
+  <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav aria-label="Navigation principale"><ul><li><a href="index.html">Aide aux devoirs</a></li><li><a href="infos.html">Infos &amp; évènements</a></li><li><a href="adhesion.html">Adhérer</a></li><li><a href="don.html" aria-current="page" class="cta">Faire un don</a></li></ul></nav>
+</div></header>
+<main id="contenu">
+
+<div class="page-title"><div class="container"><h1>Soutenir l'association</h1><p>Votre don finance le matériel scolaire, les livres et les activités culturelles.</p></div></div>
+<section><div class="container" style="max-width:760px">
+  <form id="form-don" aria-label="Faire un don">
+    <fieldset><legend>Choisissez un montant</legend>
+      <div class="amounts">
+        <label><input type="radio" name="montant" value="10"><span>10 €</span></label>
+        <label><input type="radio" name="montant" value="20" checked><span>20 €</span></label>
+        <label><input type="radio" name="montant" value="50"><span>50 €</span></label>
+        <label><input type="radio" name="montant" value="100"><span>100 €</span></label>
+      </div>
+    </fieldset>
+    <button class="btn" type="submit">Faire un don</button>
+    <p id="don-info" class="notice" hidden>Le paiement en ligne n'est pas encore activé sur ce site. En attendant, contactez-nous à <a data-email href="#"></a> pour donner par chèque ou virement. Merci pour votre générosité !</p>
+    <p class="small">Le paiement est assuré par une plateforme sécurisée externe : ce site ne collecte ni ne stocke aucune donnée bancaire.</p>
+  </form>
+  <h3 class="sub">Autres façons de nous aider</h3>
+  <div class="grid">
+    <div class="card"><div class="icon">✉️</div><h3>Chèque ou virement</h3><p>Contactez-nous pour obtenir les coordonnées de l'association.</p></div>
+    <div class="card"><div class="icon">📖</div><h3>Don de livres et fournitures</h3><p>Livres, cahiers, stylos : tout ce qui sert à apprendre trouve une seconde vie.</p></div>
+    <div class="card"><div class="icon">🙋</div><h3>Donner de son temps</h3><p>Devenez bénévole d'aide aux devoirs.</p></div>
+  </div>
+</div></section>
+
+</main>
+<footer><div class="container">
+  <div><strong>Entr'Aide et Culture (EAC)</strong><br>Association d'aide aux devoirs et d'accès à la culture.</div>
+  <div>Contact : <a data-email href="#"></a></div>
+  <div>© <span id="annee"></span> EAC</div>
+</div></footer>
+<script src="config.js"></script>
+<script src="evenements.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

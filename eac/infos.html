@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infos et évènements — Entr'Aide et Culture (EAC)</title>
+<meta name="description" content="Actualités et évènements de l'association Entr'Aide et Culture.">
+<meta name="theme-color" content="#5197a8">
+<link rel="icon" href="images/logo.webp" type="image/webp">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site"><div class="container">
+  <a class="brand" href="index.html"><img src="images/logo.webp" alt="Logo EAC : une chouette sur un livre ouvert" width="48" height="48"><span>Entr'Aide et Culture<small>EAC</small></span></a>
+  <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav aria-label="Navigation principale"><ul><li><a href="index.html">Aide aux devoirs</a></li><li><a href="infos.html" aria-current="page">Infos &amp; évènements</a></li><li><a href="adhesion.html">Adhérer</a></li><li><a href="don.html" class="cta">Faire un don</a></li></ul></nav>
+</div></header>
+<main id="contenu">
+
+<div class="page-title"><div class="container"><h1>Infos &amp; évènements</h1><p>Retrouvez ici les actualités et les rendez-vous de l'association.</p></div></div>
+<section><div class="container">
+  <h2>Prochains évènements</h2>
+  <div class="events" id="events-upcoming"><noscript><p>Activez JavaScript pour voir les évènements.</p></noscript></div>
+  <h3 class="sub">Évènements passés</h3>
+  <div class="events" id="events-past"></div>
+</div></section>
+<section class="alt"><div class="container">
+  <h2>Une question ?</h2>
+  <p class="lead">Écrivez-nous à <a data-email href="#"></a>, nous répondons dès que possible.</p>
+</div></section>
+
+</main>
+<footer><div class="container">
+  <div><strong>Entr'Aide et Culture (EAC)</strong><br>Association d'aide aux devoirs et d'accès à la culture.</div>
+  <div>Contact : <a data-email href="#"></a></div>
+  <div>© <span id="annee"></span> EAC</div>
+</div></footer>
+<script src="config.js"></script>
+<script src="evenements.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
